@@ -1,0 +1,26 @@
+info:
+  name: Atualizar coordenada por index
+  type: http
+  seq: 5
+
+http:
+  method: PUT
+  url: http://localhost:8080/geolocation/:index
+  params:
+    - name: index
+      value: "1"
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "latitude": -25.4284,
+        "longitude": -49.2733
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
